@@ -1,16 +1,15 @@
 import React from 'react'
-import './Cell.css'
 
-interface CellProps {
+interface TileProps {
   value: number
 }
 
-interface CellState {}
+interface TileState {}
 
-export default class Cell extends React.Component<CellProps, CellState> {
+export default class Tile extends React.Component<TileProps, TileState> {
   render () {
     return (
-      <div className={`cell cell-${this.props.value}`}>
+      <div className={`tile tile-${this.props.value}`}>
         {this.props.value}
       </div>
     )
