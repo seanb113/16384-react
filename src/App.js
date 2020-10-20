@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Tiles from './Tiles'
-import game from './Game'
+import game from './Gameplay'
 import './App.css'
 
 interface AppProps {}
@@ -116,7 +116,7 @@ export default class App extends React.Component<AppProps, AppState> {
     })
   }
 
-  private handleKeydown (event: any) {
+    handleKeydown (event: any) {
     const keyMap : any = {
       ArrowUp: 'up',
       ArrowDown: 'down',
@@ -129,7 +129,7 @@ export default class App extends React.Component<AppProps, AppState> {
     }
   }
 
-  private refreshGameState () : void {
+refreshGameState () : void {
     this.setState({
       tiles: game.tiles,
       score: game.score,

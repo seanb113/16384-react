@@ -9,7 +9,7 @@ class Game {
 
   won: boolean
 
-  private callbacks: any
+  callbacks: any
 
   constructor () {
     this.tiles = []
@@ -195,7 +195,7 @@ class Game {
     delete this.callbacks[event]
   }
 
-  private init () : void {
+  init () : void {
     this.tiles = Array(16).fill(0)
     Array(2).fill(null).forEach(this.generateBlock.bind(this))
     this.score = 0
@@ -203,7 +203,7 @@ class Game {
     this.over = false
   }
 
-  private checkOver () : boolean {
+ checkOver () : boolean {
     if (this.hasEmptytile()) return false
 
     for (let i = 0; i < Game.Steps.length; i++) {
@@ -224,17 +224,17 @@ class Game {
     return true
   }
 
-  private addScore (score: number) {
+  addScore (score: number) {
     this.score = this.score + score
 
     this.callbacks['addScore'] && this.callbacks['addScore'](score)
   }
 
-  private hasEmptytile (): boolean {
+  hasEmptytile (): boolean {
     return this.tiles.filter(tile => tile === 0).length !== 0
   }
 
-  private generateBlock (): void {
+  generateBlock (): void {
     while (this.hasEmptytile()) {
       const randomIndex = Math.floor(Math.random() * 16)
 
