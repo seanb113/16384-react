@@ -93,7 +93,7 @@ export default class App extends React.Component<AppProps, AppState> {
                 </div>
               </div>
           }
-          <tiles tiles={this.state.tiles} />
+          <Tiles tiles={this.state.tiles} />
         </div>
 
         <p className="game-explanation">

@@ -1,13 +1,13 @@
 import React from 'react'
 import Tile from './Tile'
 
-interface tilesProps {
+interface TilesProps {
   tiles: number[]
 }
 
-interface tilesState {}
+interface TilesState {}
 
-export default class tiles extends React.Component<tilesProps, tilesState> {
+export default class Tiles extends React.Component<TilesProps, TilesState> {
   render () {
     return (
       <div className="tiles">
@@ -17,7 +17,7 @@ export default class tiles extends React.Component<tilesProps, tilesState> {
               <div key={groupIndex} className="tiles-row">
                 {
                   tiles.map((tile: number, tileIndex: number) => {
-                    return <tile key={groupIndex * 4 + tileIndex} value={tile} />
+                    return <Tile key={groupIndex * 4 + tileIndex} value={tile} />
                   })
                 }
               </div>
