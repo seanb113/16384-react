@@ -1,5 +1,13 @@
 class Game {
+  static Steps : string[] = ['up', 'down', 'left', 'right']
 
+  tiles: number[]
+
+  score: number
+
+  over: boolean
+
+  won: boolean
 
   private callbacks: any
 
