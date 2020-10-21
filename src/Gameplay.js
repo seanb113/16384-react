@@ -1,4 +1,5 @@
 class Game {
+  
   static Steps : string[] = ['up', 'down', 'left', 'right']
 
   tiles: number[]
