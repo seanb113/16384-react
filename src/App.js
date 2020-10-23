@@ -15,6 +15,7 @@ interface AppState {
 
 export default class App extends React.Component<AppProps, AppState> {
   constructor (props: any) {
+    
     super(props)
 
     game.start()
@@ -64,7 +65,6 @@ export default class App extends React.Component<AppProps, AppState> {
           </h1>
           <div className="score-container">
             {this.state.score}
-
             {
               this.state.addition !== 0 && <div className="score-addition">
                 +{this.state.addition}
