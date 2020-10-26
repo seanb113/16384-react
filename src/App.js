@@ -18,7 +18,7 @@ export default class App extends React.Component<AppProps, AppState> {
     
     super(props)
 
-    // game.start()
+    game.start()
 
     this.state = {
       score: 0,
