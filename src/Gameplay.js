@@ -24,6 +24,7 @@ class Game {
   }
 
   up () : void {
+    
     let score = 0
 
     for (let rowIndex = 12; rowIndex < 16; rowIndex++) {
