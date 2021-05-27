@@ -30,7 +30,6 @@ export default class Tiles extends React.Component<TilesProps, TilesState> {
 
   tileGroups () {
     let groups : any[] = []
-
     this.props.tiles.forEach((value: number, index: number) => {
       let groupIndex : number = Math.floor(index / 4)
       groups[groupIndex] = groups[groupIndex] || []
